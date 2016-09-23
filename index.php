@@ -49,8 +49,8 @@ $students = $tdg->getStudents($recordsOnPage, $page, $search, $order, $orderdir)
 $linkpage = $pager->generatePageList($recordsOnPage, $tdg->getCountRecords($search), $page);
 $headers = $tdg->getHeaders();
 
-include('header.html');
-include('search.html');
-include('table.html');
-include('linkpage.html');
-include('footer.html');
+include('templates/header.html');
+include('templates/search.html');
+include('templates/table.html');
+include('templates/linkpage.html');
+include('templates/footer.html');

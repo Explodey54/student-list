@@ -53,10 +53,10 @@ if (empty(implode('',$error)) && !(empty($_POST))) {
 }
 
 
-include('header.html');
+include('templates/header.html');
 if (empty($notifyVar)) {
-    include('form.html');
+    include('templates/form.html');
 } else {
-    include('notify.html');
+    include('templates/notify.html');
 }
-include('footer.html');
+include('templates/footer.html');
