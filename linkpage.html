@@ -1,0 +1,13 @@
+<div class="linkpage">
+    <?php foreach ($linkpage as $link): ?>
+    <div class="page">
+        <?php if (is_numeric($link) && $page!= $link) : ?>
+        <a class="pagelink pagelink-not-active" href="<?=$linkster->createLink('page', $link, $url) ?>"><?=$link ?></a>
+        <?php elseif($page!= $link): ?>
+        <a class="pagelink"><?=$link ?></a>
+        <?php else: ?>
+        <a class="pagelink pagelink-active"><?=$link ?></a>
+        <?php endif; ?>
+    </div>
+    <?php endforeach; ?>
+</div>

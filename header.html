@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <title>Список абитуриентов</title>
+</head>
+<body>
+    <header>
+        <div class="container clearfix">
+        <a href="http://<?=$_SERVER[HTTP_HOST] ?>" class="logo">
+            <div class="logo-picture"></div>
+            <div class="logo-text">Список</br>абитуриентов</div>
+        </a>
+        <a href="http://<?=$_SERVER[HTTP_HOST] ?>/registration.php" class="profile">
+            <?php if(!empty($_SESSION)): ?>
+            <?=$_SESSION[name] ?> <?=$_SESSION[surname] ?> 
+            <?php else: ?>
+            Записаться
+            <?php endif; ?>
+        </a>
+        </div>
+    </header>

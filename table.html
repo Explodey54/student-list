@@ -1,0 +1,36 @@
+    <table class="students" id="palyground">
+        <tr>
+            <?php foreach ($headers as $head): ?>
+            <th>
+                <?php if ($orderdir == 'asc' && $head[name] == $order): ?>
+                <a href="<?=$linkster->createLink('orderdir', 'desc', $linkster->createLink('order', $head[name], $url)) ?>">
+                <?php elseif ($head[name] == $order): ?>
+                <a href="<?=$linkster->createLink('orderdir', 'asc', $linkster->createLink('order', $head[name], $url)) ?>">
+                <?php else: ?>  
+                <a href="<?=$linkster->createLink('order', $head[name], $url) ?>">
+                <?php endif; ?>
+                        <?php if ($orderdir == 'asc' && $head[name] == $order): ?>
+                        <div class="order order-top">
+                        <?php elseif ($head[name] == $order): ?>
+                        <div class="order order-bottom">
+                        <?php else: ?> 
+                        <div class="order">
+                        <?php endif; ?>
+                            <?=$head[descr] ?>
+                        </div>
+                </a>
+            </th>
+            <?php endforeach; ?>
+        </tr>
+        <?php foreach ($students as $stud): ?>
+        <tr <?php if ($stud[email] == $_SESSION[email]): ?>class="user-row" <?php endif; ?>>
+            <?php foreach ($stud as $value): ?>
+            <td><?=$value ?></td>
+            <?php endforeach; ?>
+        </tr>
+        <?php endforeach; ?> 
+                    
+    </table>
+        <?php if(empty($students)): ?>
+                    <div class="empty-table">Ничего не найдено.</div>
+        <?php endif; ?>

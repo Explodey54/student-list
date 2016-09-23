@@ -1,0 +1,233 @@
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin: 0 0 70px; 
+    padding: 0px;
+    padding-bottom: 25px;
+}
+
+a {
+  text-decoration: none;    
+}
+
+.btn {
+  display: inline-block;
+  font-weight: bold;
+  text-transform: uppercase;
+  background-color: #ec8546;
+  padding: 15px 10px;
+  text-decoration: none;
+  color: white;
+  border-radius: 5px;
+  margin-top: 20px;
+  border: 2px solid #7c603c;
+  font-family: Geneva, Arial, Helvetica, sans-serif;
+}
+
+.btn:active {
+  border: 2px solid black;  
+  background-color: #c66c36;    
+}
+
+.container {
+  width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.clearfix {
+  clear: both;
+  display: table;
+  content: "";
+}
+
+header {
+  background-color: #f4a469;
+}
+
+header .logo {
+  display: inline-block;
+  font-size: 28px;
+  text-decoration: none;
+  color: white;
+  float: left;
+  margin-top: -8px;
+  font-family: Optima,Segoe,Segoe UI,Candara,Calibri,Arial,sans-serif;
+  padding: 10px 0px;
+}
+
+header .logo-picture {
+  display: inline-block;
+  width: 40px;
+  height: 54px;
+  background-image: url("img/icons.png");
+}
+
+header .logo-text {
+  padding-top:10px;
+  display: inline-block;
+  line-height: 30px;
+}
+
+header .profile {
+  display: inline-block;
+  padding: 30px 0px;
+  vertical-align: middle;
+  float: right; 
+  font-size: 20px;
+  text-decoration: none;
+  color: white;
+  font-family: Optima,Segoe,Segoe UI,Candara,Calibri,Arial,sans-serif;
+}
+
+header .profile:after {
+  content: '';
+  width: 26px;
+  height: 26px;
+  display: inline-block;
+  vertical-align: middle;
+  background-image: url("img/icons.png");
+  background-position: -42px -29px;
+}
+
+.search {
+  padding: 20px 0px;
+}
+
+.students {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.students th {
+  border-bottom: 2px solid gray;
+  margin-bottom: 10px;
+}
+
+.students th a {
+  color: black;
+  text-align: left;    
+}
+
+table.students tr.user-row {
+  background-color: #fba786;    
+}
+
+.students tr:nth-child(2n) {
+     background-color: #f3f0e6;
+}
+
+.order-top:after {
+  content: "\25BC";
+  color: #ff3a3a;    
+}
+
+.order-bottom:after {
+  content: "\25B2";
+  color: #43ce3c;    
+     
+}
+
+.order {
+  padding-right: 20px;    
+}
+
+.order-top {
+  padding-right: 0px;    
+}
+
+.order-bottom {
+  padding-right: 0px;    
+}
+
+.notify {
+  padding-top: 20px;    
+}
+
+.empty-table {
+  text-align: center;   
+  background-color: #f3f0e6; 
+  padding: 120px;    
+}
+
+.linkpage .page {
+  display: inline-block;
+  margin-top: 20px;
+}
+
+.linkpage .pagelink {
+  padding: 5px;
+  border-radius: 2px;
+}
+
+.linkpage .pagelink-active {
+  background-color: #ec8546;
+  color: white;    
+}
+
+.linkpage .pagelink-not-active {
+  color: black;    
+}
+
+.linkpage .pagelink-not-active:hover {
+  background-color: #e7cdbd;    
+}
+
+.registration {
+    padding-top: 20px;
+}
+
+
+
+.registration-col-1 {
+  width: 130px;    
+}
+
+.registration-col-1:after {
+  content:"*";
+  color: red;
+}
+
+.registration-col-2 {
+  width: 200px;    
+}
+
+.registration-col-2 input[type=text] {
+  width: 200px;  
+  border: 2px solid #e7b26e;
+  border-radius: 3px;
+  height: 20px; 
+}
+
+.registration-col-2 input[type=text]:focus {
+  border: 2px solid #fa9f29;
+}
+
+
+.registration-col-3 {
+  color: red;
+}
+
+.error input[type=text] {
+  border-color: red;
+}
+
+
+footer {
+  background-color: #2b2b2b;
+  text-align: center;
+  color: white;
+  width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 70px;
+    overflow:hidden;
+}
+
+footer p {
+    margin: 25px;
+}

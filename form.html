@@ -1,0 +1,28 @@
+<body>  
+    <div class="container">
+        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post" autocomplete="on" class="registration">
+            <table>
+                <?php foreach ($fields as $value): ?>
+                <tr>
+                    <td class="registration-col-1">
+                        <label <?php if ($value[type] == text): ?> for="<?=$value[name]; ?>" <?php endif; ?>><?=$value[descr]; ?>:</label>
+                </td>
+                    <td class="registration-col-2 <?php if (isset($error[$value[name]])): ?>error<?php endif; ?>">
+                        <?php if ($value[type] == text || $value[type] == email): ?>
+                        <input id="<?=$value[name] ?>" name="<?=$value[name] ?>" type="<?=$value[type] ?>"value="<?=$_SESSION[$value[name]] ?>"> 
+                        <?php elseif ($value[type] == radio): ?>
+                        <label><?=explode(',',$value[values][0])[0]; ?>:
+                            <input type="radio" name="<?=$value[name] ?>" value="<?=explode(',',$value[values][0])[1] ?>" checked>
+                        </label>
+                        <label><?=explode(',',$value[values][1])[0]; ?>:
+                            <input type="radio" name="<?=$value[name] ?>" value="<?=explode(',',$value[values][1])[1] ?>">
+                        </label>
+                        <?php endif; ?>
+                    </td>
+                    <td class="registration-col-3">
+                        <?=$error[$value[name]]->errordescr; ?>
+                    </td>
+                <?php endforeach; ?>
+            </table>
+            <input type="submit" value="Отправить" class="btn">
+        </form>
